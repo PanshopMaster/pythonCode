@@ -6,7 +6,6 @@
 # Printing the user input
 #print("You entered:", user_input)
 
-
 class Trabajador:
     def __init__(self, name, grad, age):
         self.name = name
@@ -17,5 +16,7 @@ class Trabajador:
         print(f"Nombre: {self.name}, Puesto: {self.grad}, Edad: {self.age}")
 
 # Ejemplo de uso
+input
+
 trabajador1 = Trabajador("Juan", "Ingeniero", "22")
 trabajador1.mostrar_informacion()
