@@ -26,7 +26,7 @@ def select_data(connection):
     cursor.execute(query)
     rows = cursor.fetchall()
     for row in rows:
-        print(row)
+        print(row.VOUCHER, row.DOCUMENTO, row.CUENTA, row.DESCRIPTION, row.AMOUNT_TYPE, row.DEBITO, row.CREDITO, row.MONEDA, row.MAYOR)
     return rows   
  # Example usage
 if conn:
