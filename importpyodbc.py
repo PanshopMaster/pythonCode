@@ -22,11 +22,12 @@ def create_connection():
 conn = create_connection()
 def select_data(connection):
     cursor = connection.cursor()
-    query = "SELECT TOP (1) [VOUCHER],[DOCUMENTO],[TIPO],[FECHA DOC],[FECHA POST],[FECHA CREADO],[ID AUX],[RUT],[NOMBRE],[USUARIO],[TIPO CAMBIO],[BATCH],[ROWID],[CUENTA],[DESCRIPTION],[AMOUNT_TYPE],[DEBITO],[CREDITO],[MONEDA],[MAYOR]FROM [VISUAL10].[dbo].[AA_MAYOR]"
+    query = "Select * from WORK_ORDER where BASE_ID like 'OT%'"
     cursor.execute(query)
     rows = cursor.fetchall()
     for row in rows:
-        print(row.VOUCHER, row.DOCUMENTO, row.CUENTA, row.DESCRIPTION, row.AMOUNT_TYPE, row.DEBITO, row.CREDITO, row.MONEDA, row.MAYOR)
+        if row.BASE_ID == 'OT126945':
+            print(row.BASE_ID)
     return rows   
  # Example usage
 if conn:
